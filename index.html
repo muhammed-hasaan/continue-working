@@ -1,0 +1,1499 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>New UI</title>
+</head>
+<style>
+	@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css");
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+.bg-blue-color {
+	background-color: #046bd2;
+}
+.bg-yellow-color {
+	background-color: #ffff00;
+}
+.text-color-blue {
+	color: #046bd2;
+}
+.text-color-yellow {
+	color: #ffff00;
+}
+h3.heading-ots-2 {
+	font-size: 18px;
+}
+h3.Ads-available {
+	font-size: 2em;
+}
+/* Styling */
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Poppins", Sans-serif;
+	background: #046bd2;
+}
+/* .cards-sections.bg-yellow-color.p-2 p {font-size: 0.6em; } */
+input.cutsom-form-1 {
+	padding: 1px 10px 1px 10px;
+	border: none;
+	border-radius: 0;
+	font-size: 15px;
+	font-weight: 600;
+	color: #046bd2;
+	border-radius: 25px;
+}
+
+.form-control:focus {
+	color: #046bd2;
+	background-color: #ffff00;
+	border-color: #ffff00;
+	outline: 0;
+	box-shadow: 0 0 0 0.0rem rgba(13, 109, 253, 0);
+}
+
+select.form-select.form-select-sm {
+	line-height: 1;
+	height: 24px;
+	background-color: #ffff00;
+	border-color: #ffff00;
+	color: #046bd2;
+	font-size: 17px;
+}
+
+.form-select:focus {
+	border-color: #ffff00;
+	outline: 0;
+	box-shadow: 0 0 0 0.0rem rgba(13, 109, 253, 0);
+}
+/* Cards Sizes and Styles */
+.aside-blog-card-01 {
+	/* width: 208px; */
+	height: 260px;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid #000000;
+}
+
+.aside-blog-card-02 {
+	/* width: 150px; */
+	height: 175px;
+	cursor: pointer;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+.aside-blog-card-03 {
+	/* width: 150px; */
+	height: 78px;
+	cursor: pointer;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+.aside-blog-card-04 {
+	/* width: 210px; */
+	height: 125px;
+	cursor: pointer;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+.aside-blog-card-05 {
+	/* width: 210px; */
+	height: 140px;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+.aside-blog-card-06 {
+	/* width: 210px; */
+	height: 112px;
+	cursor: pointer;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+.aside-blog-card-07 {
+	/* width: 148px; */
+	height: 160px;
+	cursor: pointer;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+.aside-blog-card-08 {
+	/* width: 147px; */
+	height: 91px;
+	cursor: pointer;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+.aside-blog-card-09 {
+    /* width: 147px; Actual Size */
+	height: 139px;
+	cursor: pointer;
+	border: 1px solid #000000;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+.aside-blog-card-10 {
+    /* width: 178px; Actual Size */
+	height: 112px;
+	cursor: pointer;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+
+p.ads-text-col {
+	font-size: 54px;
+}
+
+/* Pagination Style */
+
+.slider {
+	display: block;
+	position: relative;
+}
+
+.slider-wrapper {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.slide {
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 500ms linear;
+}
+
+.slide.active {
+	/* display: flex !important; */
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+	transition: opacity 500ms linear;
+}
+.inside-page-sec-lower{
+	position: relative;
+	overflow: hidden;
+}
+/* animnation on hover */
+.content-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    height: calc(100%);
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    transform: translateY(100%);
+    transition: all 0.80s ease;
+}
+.aside-blog-card-01:hover .content-container{
+    transform: translateY(0);
+}
+.aside-blog-card-02:hover .content-container{
+    transform: translateY(0);
+}
+.aside-blog-card-03:hover .content-container{
+    transform: translateY(0);
+}.aside-blog-card-04:hover .content-container{
+    transform: translateY(0);
+}
+.aside-blog-card-05:hover .content-container{
+    transform: translateY(0);
+}
+.aside-blog-card-06:hover .content-container{
+    transform: translateY(0);
+}
+.aside-blog-card-07:hover .content-container{
+    transform: translateY(0);
+}
+.aside-blog-card-08:hover .content-container{
+    transform: translateY(0);
+}
+.aside-blog-card-09:hover .content-container{
+    transform: translateY(0);
+}
+.aside-blog-card-10:hover .content-container{
+    transform: translateY(0);
+}
+.inner-sec-pop{
+	border:1px solid #046bd2 ;
+	height: 100%;
+}
+/* Pagination buttons */
+.nav-md {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	border-radius: 10px;
+}
+.btn button {
+	box-shadow: none;
+	border: none;
+	background: none;
+	color: #ffff00;
+	display: inline-block;
+	font-size: 35px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0px 5px;
+	-webkit-transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	-ms-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
+}
+.btn button:active {
+	transform: scale(0.95);
+	border: none !important;
+}
+.slider-pagination a {
+	display: flex;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	font-size: 20px;
+	color: #ffff00 !important;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 0.3em;
+	cursor: pointer;
+	opacity: 0.9;
+	-webkit-transition: all 0.21s ease-in;
+	-moz-transition: all 0.21s ease-in;
+	-ms-transition: all 0.21s ease-in;
+	transition: all 0.21s ease-in;
+}
+.slider-pagination a.current {
+	width: 28px;
+	height: 28px;
+	border-radius: 50px;
+	font-size: 12px;
+	color: #046bd2 !important;
+	vertical-align: middle;
+	border-color: transparent;
+	background: #ffff00;
+	cursor: pointer;
+	opacity: 1;
+	transform: scale(1.2);
+	-webkit-transition: all 0.21s ease-in;
+	-moz-transition: all 0.21s ease-in;
+	-ms-transition: all 0.21s ease-in;
+	transition: all 0.21s ease-in;
+}
+/* Small Phone Media Query */
+@media only screen and (max-width: 600px) {
+	mark.highlighted-bg.bg-yellow-color.text-color-blue.rounded-pill {
+		font-size: 29px;
+	}
+	input.cutsom-form-1 {
+		padding: 0px 20px 0px 20px;
+		width: 150px;
+	}
+	.ads_distribution {
+		margin: 10px 0;
+	}
+	.mt-mobile {
+		margin-top: 0.5rem;
+	}
+	.aside-blog-card-01, 
+    .aside-blog-card-02, 
+    .aside-blog-card-03, 
+    .aside-blog-card-04,
+    .aside-blog-card-05,
+    .aside-blog-card-06, 
+    .aside-blog-card-07,
+    .aside-blog-card-08,
+    .aside-blog-card-09,
+    .aside-blog-card-10 {
+		width: 100%;
+	}
+}
+</style>
+<body>
+	<!-- header Section -->
+    <div style="width: 100%;padding-left: 40px;">
+        <h3>Zip Code</h3>
+    </div>
+    
+    <center>
+        <select id="imageSelector" style="width: 95%; height: 70px;"> 
+            <option value="selectall">Select All</option>
+            <option value="1000">1000</option>
+            <option value="2000">2000</option>
+            <option value="2000">3000</option>
+        </select>
+        <button id="changeImageButton">Change Image</button>
+    </center>
+	<section class="p-lg-5 bg-blue-color">
+		<div class="container">
+			<div class="row d-flex align-items-center">
+				<!-- Title Col 1 -->
+				<div class="col-lg-3 col-md-3 col-sm-12">
+					<div class="text-center">
+						<p class="title-ots-1 text-white">You can have your ad publish in this flyer, for as low as $300 a month!</p>
+					</div>
+				</div>
+				<!-- Ad Avaliable col -->
+				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+					<div class="">
+						<div class="row">
+							<div class="col-lg-12 col-sm-12">
+								<h3 class="text-white Ads-available"><mark class="highlighted-bg bg-yellow-color text-color-blue rounded-pill">Available Ad Space</mark></h3> </div>
+						</div>
+						<div class="row gx-2">
+							<div class="col-lg-8 col-sm-12 ads_distribution mt-2 p-1">
+								<div class="">
+									<h3 class="bg-yellow-color heading-ots-2 m-0 text-color-blue rounded-pill p-1">Current Ads Distribution</h3> </div>
+							</div>
+							<div class="col-lg-4 col-sm-12 mt-2">
+								<form action="" class="">
+									<div class="form-date-custom d-flex bg-yellow-color align-content-center rounded-pill p-1 text-color-blue justify-content-center">
+										<h3 class="text-color-blue heading-ots-2 m-0">Date:</h3>
+										<input type="date" class="cutsom-form-1 bg-yellow-color form-control" id="" placeholder="" value="2023-11-13"> </div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Col 3 -->
+				<div class="col-lg-3 col-md-3 col-sm-12 ads_distribution mt-2">
+					<div class="third-col-sec">
+						<form>
+							<div class="d-flex bg-yellow-color rounded-pill p-1" style="padding-left: 10px !important;">
+								<h3 class="text-color-blue heading-ots-2 m-0">State:</h3>
+								<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+									<option selected>California</option>
+									<option value="texas">Texas</option>
+									<option value="florida">Florida</option>
+									<option value="ohio">Ohio</option>
+								</select>
+							</div>
+							<div class="d-flex bg-yellow-color rounded-pill p-1 mt-2"  style="padding-left: 10px !important;">
+								<h3 class="text-color-blue heading-ots-2 m-0">City:</h3>
+								<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+									<option selected>New York</option>
+									<option value="chicago">Chicago</option>
+									<option value="phoenix">Phoenix</option>
+									<option value="sanDiego">San Diego</option>
+								</select>
+							</div>
+							<div class="d-flex bg-yellow-color rounded-pill p-1 mt-2"  style="padding-left: 10px !important;">
+								<h3 class="text-color-blue heading-ots-2 m-0">ZipCode:</h3>
+								<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+									<option selected>000011</option>
+									<option value="00022">00022</option>
+									<option value="00022">00033</option>
+									<option value="00044">00044</option>
+								</select>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Body Section -->
+	<section class="bg-blue-color pb-5">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="slider">
+					<div class="slider-wrapper">
+                        <div class="slide">
+                            
+							<div class="row gx-2">
+                               
+								<!-- Page 1 Section -->
+								<div class="col-lg-6 col-sm-12 mt-5">
+									<h2 class="text-center text-white">Page 01</h2>
+									<div class="cards-sections bg-yellow-color p-2">
+										<!-- Upper Sectiomn -->
+										<div class="row d-flex gx-2 inside-page-sec-lower">
+											<!--  1st Col -->
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="row gx-2">
+													<!--Card 1  -->
+													<div class="col-lg-8 col-md-8 col-sm-12 gy-2 ">
+														<a href="#" class="p-0">
+															<div class="bg-white aside-blog-card-05" style="width: 395px; height: 260px;">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<!-- content -->
+																	<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																		<div class="content-container p-3 overflow-hidden">
+																			<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																				<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-3/8" x 8.00"</h3>
+																				<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																				<div class="row justify-content-center mt-4">
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">1-Month<br>$665.00</p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">2-Month<br>$599.00</p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">3-Month<br>$532.00</p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														<!-- <a href="#" class="p-0">
+															<div class="bg-white aside-blog-card-06 mt-2"> -->
+																<!-- Content Area -->
+																<!-- <div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 3-3/4" x 8.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$547.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$493.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$438.00</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a> -->
+														
+														
+													</div>
+													<!-- Card 2 -->
+													<div class="col-lg-4 col-md-4 col-sm-12">
+														<div class="right-card-inside-page row gy-2 m-0">
+															<!-- <a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-07"> -->
+																	<!-- Content Area -->
+																	<!-- <div class="Ads-available align-items-md-center d-flex justify-content-center">
+																		<div class="content-container p-3 overflow-hidden">
+																			<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																				<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/8" x 6.00"</h3>
+																				<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																				<div class="row justify-content-center mt-4">
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">1-Month<br>$398.00</p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">2-Month<br>$359.00</p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">3-Month<br>$320.00</p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a> -->
+															
+															<!-- <div class="bg-yellow-color bg-white aside-blog-card-08 d-flex align-items-center justify-content-center"> -->
+																<!-- Content -->
+																<!-- <div class="Ads-available align-items-md-center d-flex justify-content-center"> -->
+																	<!-- <div class="content-container p-3 overflow-hidden"> -->
+																		<!-- <div class="bg-blue-color border-2 bg-white inner-sec-pop p-4"> -->
+																			<!-- <h3 class="row justify-content-center text-black fw-bold">Address & Postage Place</h3> -->
+<!-- 
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/8" x 6.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$398.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$359.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$320.00</p>
+																				</div>
+																			</div> -->
+																		<!-- </div> -->
+																	<!-- </div> -->
+																<!-- </div> -->
+															<!-- </div> -->
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- 2nd Col -->
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="row gx-2">
+													<div class="col-lg-8 col-md-8 col-sm-12 gy-2 ">
+														<a href="#" class="p-0">
+															<div class="bg-white aside-blog-card-05">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-3/8" x 8.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$665.00/p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$599.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$532.00</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														
+													</div>
+													<div class="col-lg-4 col-md-4 col-sm-12">
+														<a href="#">
+															<div class="right-card-inside-page row gy-2 m-0">
+																<div class="bg-white aside-blog-card-09">
+																	<!-- Content Area -->
+																	<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																		<div class="content-container p-3 overflow-hidden">
+																			<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																				<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/8" x 5-3/8"</h3>
+																				<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																				<div class="row justify-content-center mt-4">
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														
+													</div>
+												</div>
+												<!--  -->
+												<div class="row gx-2 mt-2">
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<a href="#">
+															<div class="bg-white aside-blog-card-10">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 3-3/4" x 6-5/16"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-6 col-md-6 col-sm-12 mt-mobile">
+														<a href="#">
+															<div class="bg-white aside-blog-card-10 ">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 3-3/4" x 6-5/16"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Lower Section -->
+										<div class="row gx-2 inside-page-sec-lower">
+											<!--  1st Col -->
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<!--  -->
+												<div class="row gx-2 mt-2">
+													<div class="col-lg-4 col-md-4 col-sm-12">
+														<a href="#" class="">
+															<div class="bg-white aside-blog-card-09">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/8" x 5-3/8"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-8 col-md-8 col-sm-12 mt-mobile">
+														<a href="#" class="p-0">
+															<div class="bg-white aside-blog-card-05">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-3/8" x 8.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$665.00/p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$599.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$532.00</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														
+													</div>
+												</div>
+												<!--  -->
+												<div class="row gx-2 mt-2">
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<a href="#">
+															<div class="bg-white aside-blog-card-10">
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 3-3/4" x 6-5/16"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<!-- Content Area -->
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-6 col-md-6 col-sm-12 mt-mobile">
+														<a href="#">
+															<div class="bg-white aside-blog-card-10">
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 3-3/4" x 6-5/16"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<!-- Content Area -->
+															</div>
+														</a>
+														
+													</div>
+												</div>
+											</div>
+											<!-- 2nd Col -->
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="row gx-2 mt-2">
+													<div class="col-lg-4 col-md-4 col-sm-12">
+														<a href="#">
+															<div class="bg-white aside-blog-card-09">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/8" x 5-3/8"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+													</div>
+													<div class="col-lg-8 col-md-8 col-sm-12 mt-mobile">
+														<a href="#" class="p-0">
+															<div class="aside-blog-card-05 bg-white">
+																<!-- content -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-3/8" x 8.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$665.00/p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$599.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$532.00</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														
+													</div>
+												</div>
+												<!--  -->
+												<div class="row gx-2 mt-2">
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<a href="#">
+															<div class="bg-white aside-blog-card-10">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 3-3/4" x 6-5/16"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														
+													</div>
+													<div class="col-lg-6 col-md-6 col-sm-12 mt-mobile">
+														<a href="">
+															<div class="bg-white aside-blog-card-10">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 3-3/4" x 6-5/16"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Page 2 Section -->
+                                 
+								<div class="col-lg-6 col-sm-12 mt-5 inside-page-sec">
+                                 
+									<h2 class="text-center text-white">Page 02</h2>
+									<div class="cards-sections bg-yellow-color p-2">
+										<!-- Upper Sectiomn -->
+										<div class="row d-flex gx-2 inside-page-sec-lower">
+											<!--  1st Col -->
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="row gx-2">
+													<!--Card 1  -->
+													<div class="col-lg-8 col-md-8 col-sm-12 gy-2 ">
+														<a href="#">
+															<div class="bg-white aside-blog-card-01" id="imageChangeDiv">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 7.00” x 9-3/8”</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$820.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Months<br>$738.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Months<br>$656.00</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+													</div>
+													<!-- Card 2 -->
+													<div class="col-lg-4 col-md-4 col-sm-12">
+														<div class="right-card-inside-page row gy-2 m-0">
+															<a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-02">
+																	<!-- Content Area -->
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-5/8” x 6.00”</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$618.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$557.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$495.00</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+															<a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-03">
+																	<!-- Content Area -->
+																	<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																		<div class="content-container p-3 overflow-hidden">
+																			<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																				<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-5/8" x 3-1/8"</h3>
+																				<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																				<div class="row justify-content-center mt-4">
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- 2nd Col -->
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="row gx-2">
+													<!--Card 1  -->
+													<div class="col-lg-8 col-md-8 col-sm-12 gy-2 ">
+														<a href="#" class="p-0">
+															<div class="bg-white aside-blog-card-04">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/16" x 7.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														<a href="#" class="p-0">
+															<div class="bg-white aside-blog-card-04 mt-2">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/16" x 7.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+													</div>
+													<!-- Card 2 -->
+													<div class="col-lg-4 col-md-4 col-sm-12">
+														<div class="right-card-inside-page row gy-2 m-0">
+															<a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-02">
+																	<!-- Content Area -->
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-5/8” x 6.00”</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+															<a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-03">
+																	<!-- Content Area -->
+																	
+																	<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																		<div class="content-container p-3 overflow-hidden">
+																			<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																				<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-5/8" x 3-1/8"</h3>
+																				<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																				<div class="row justify-content-center mt-4">
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Lower Section -->
+										<div class="row d-flex gx-2 inside-page-sec-lower">
+											<!--  3rd Col -->
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="row gx-2">
+													<!--Card 1  -->
+													<div class="col-lg-8 col-md-8 col-sm-12 gy-2 ">
+														<a href="#" class="p-0">
+															<div class="bg-white aside-blog-card-04">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/16" x 7.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														
+														<a href="#" class="p-0">
+															<div class="bg-white aside-blog-card-04 mt-2">
+																<!-- Content Area -->
+																<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 4-5/16" x 7.00"</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+														
+													</div>
+													<!-- Card 2 -->
+													<div class="col-lg-4 col-md-4 col-sm-12">
+													
+														<div class="right-card-inside-page row gy-2 m-0">
+															<a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-02">
+																	<!-- Content Area -->
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-5/8” x 6.00”</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$618.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$557.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$495.00</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+															<a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-03">
+																	<!-- Content Area -->
+																	<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																		<div class="content-container p-3 overflow-hidden">
+																			<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																				<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-5/8" x 3-1/8"</h3>
+																				<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																				<div class="row justify-content-center mt-4">
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+
+															   </div>
+															</a>														
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- 4th Col -->
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="row gx-2">
+													<!--Card 1  -->
+													<div class="col-lg-8 col-md-8 col-sm-12 gy-2 ">
+														<a href="#">
+															<div class="bg-white text-color-blue aside-blog-card-01" id="image12">
+																<!-- Content -->
+																<div class="content-container p-3 overflow-hidden">
+																	<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																		<h3 class="row justify-content-center text-black fw-bold">Ad Size: 7.00” x 9-3/8”</h3>
+																		<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																		<div class="row justify-content-center mt-4">
+																			<div class="col-lg-4 text-center">
+																				<p class="text-color-blue fw-bold">1-Month<br>$820.00</p>
+																			</div>
+																			<div class="col-lg-4 text-center">
+																				<p class="text-color-blue fw-bold">2-Month<br>$738.00</p>
+																			</div>
+																			<div class="col-lg-4 text-center">
+																				<p class="text-color-blue fw-bold">3-Month<br>$656.00</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</a>
+													</div>
+													<!-- Card 2 -->
+													<div class="col-lg-4 col-md-4 col-sm-12">
+														<div class="right-card-inside-page row gy-2 m-0">
+															<a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-02">
+																	<!-- Content Area -->
+																	<div class="content-container p-3 overflow-hidden">
+																		<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																			<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-5/8” x 6.00”</h3>
+																			<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																			<div class="row justify-content-center mt-4">
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$618.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$557.00</p>
+																				</div>
+																				<div class="col-lg-4 text-center">
+																					<p class="text-color-blue fw-bold">1-Month<br>$495.00</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+															<a href="#" class="p-0">
+																<div class="bg-white aside-blog-card-03">
+																	<!-- Content Area -->
+																	<div class="Ads-available align-items-md-center d-flex justify-content-center">
+																		<div class="content-container p-3 overflow-hidden">
+																			<div class="bg-blue-color border-2 bg-white inner-sec-pop p-4">
+																				<h3 class="row justify-content-center text-black fw-bold">Ad Size: 5-5/8" x 3-1/8"</h3>
+																				<h3 class="row justify-content-center text-black mt-3 ">Cost</h3>
+																				<div class="row justify-content-center mt-4">
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">1-Month<br>$ Required </p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">2-Month<br>$ Required </p>
+																					</div>
+																					<div class="col-lg-4 text-center">
+																						<p class="text-color-blue fw-bold">3-Month<br>$ Required </p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</a>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slide">Page 2</div>
+						<div class="slide">Page 3</div>
+						<div class="slide">Page 4</div>
+					</div>
+					<!-- pagination -->
+					<div class="nav-md">
+						<div class="btn slider-nav">
+							<button class="slider-previous text-uppercase" id="prev"><i class="bi bi-arrow-left-circle-fill"></i></button>
+						</div>
+						<div class="slider-pagination"></div>
+						<div class="btn slider-nav ">
+							<button class="slider-next text-uppercase" id="next"><i class="bi bi-arrow-right-circle-fill"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		//-------------------------------pagination------------------------------
+
+		$(document).ready(function(){
+    var activeSlider = $('.slider');// Get the active slider element
+
+    // Remove all links from the slider-pagination element
+    $('.slider-pagination a').remove();
+
+
+    // Find all slide elements within the slider-wrapper element and append a link for each slide to the slider-pagination element
+    $('.slider-wrapper').find('.slide').each(function (index) {
+        $('.slider-pagination').append('<a>'+(index+1)+'</a>');
+    });
+
+    // Remove the 'current' class from the current link and the 'active' class from all slides
+    $('.current').removeClass('current');
+    $('.slide').removeClass('active');
+    
+    // Set the first slide to be the active slide and the first link to have the 'current' class
+    activeSlider.find('.slider-wrapper > .slide:first-child').addClass('active').show();
+    activeSlider.find('.nav-md > .slider-pagination a').first().addClass('current');
+    
+
+    // When a link is clicked within the slider-pagination element
+    $('.slider-pagination a').click(function() {
+        // Remove the 'current' class from the current link and add it to the clicked link
+        $('.current').removeClass('current');
+        $(this).addClass('current');
+
+        var sliderInd = $(this).index();                                // Get the index of the clicked link and set the corresponding slide to be the active slide
+        activeSlider.find('.slider-wrapper > .slide.active').removeClass('active').hide();
+        activeSlider.find('.slider-wrapper > .slide').eq(sliderInd).fadeIn(250).addClass('active');
+    });
+
+
+    // For each slider element
+    $('.slider').each(function() {
+        var show = 3;                                                   // Set the number of links to show at one time to 5
+        let dots = $('.slider-pagination').children('a');               // Get all links within the slider-pagination element
+        let count_el = $('.slider-pagination').children('a').length;    // Get the total number of links within the slider-pagination element
+
+        // If there are more links than the number to show
+        if (dots.length > show) {
+            // Hide links after the number to show
+            $(this).find('.slider-pagination').children('a').slice(show).hide();
+        }
+        else {
+            // Show all links
+            $(this).find('.slider-pagination').children('a').slice(count_el).show(); 
+        }
+    });
+
+});
+
+
+		$(document).ready(function() {
+    var sliderPagers = $('.slider').find('.slider-pagination a'),       // Get all links within the slider-pagination element for the active slider
+        lastElem = sliderPagers.last().index(),                         // Get the index of the last link within the slider-pagination element
+        activeSlider = $('.slider'),                                    // Get the active slider element
+        sliderTarget;
+
+
+    // Update the slider
+    function sliderResponse(sliderTarget) {
+        sliderPagers.removeClass('current');
+        sliderPagers.eq(sliderTarget).addClass('current');
+
+        activeSlider.find('.slider-wrapper > .slide.active').hide().removeClass('active');
+        activeSlider.find('.slider-wrapper > .slide').eq(sliderTarget).fadeIn(250).addClass('active');
+        }
+
+
+    // Handles next button click
+    $('.slider-next').on('click', function() {
+        lastElem = sliderPagers.length-1;
+
+        // Get index of currently active slider
+        sliderTarget = activeSlider.find('.slider-pagination a.current').index();
+
+        // Determine which slider to switch to
+        if (sliderTarget === lastElem) {
+            sliderTarget = 0;
+        }  
+        else {
+            sliderTarget = sliderTarget + 1;
+        }
+
+        // Update slider pagination
+        sliderPagers.eq(sliderTarget).addClass('current').show();       
+
+        // Hide previous pagination elements if necessary
+        if (sliderTarget > 4) {
+            sliderPagers.eq(sliderTarget - 5).hide();
+        }
+
+        // Show all pagination elements if necessary
+        if (sliderTarget == 0) {
+            activeSlider.find('.slider-pagination').children('a').show();
+            activeSlider.find('.slider-pagination a').slice(5).hide();
+        }
+
+        // Update slider response
+        sliderResponse(sliderTarget);
+    });
+
+    
+    // Handles previous button click
+    $('.slider-previous').on('click', function() {
+        lastElem = sliderPagers.length-1; 
+
+        // Get index of currently active slider
+        sliderTarget = activeSlider.find('.slider-pagination a.current').index();
+
+        // Determine which slider to switch to
+        if (sliderTarget === 0) {
+            sliderTarget = lastElem;
+            sliderPagers.eq(lastElem).addClass('current').show();
+        }  
+        else {
+            sliderTarget = sliderTarget-1;
+            sliderPagers.eq(sliderTarget).addClass('current').show();
+        }
+
+        // Hide next pagination elements if necessary
+        if (sliderTarget<sliderPagers.length-5) {
+            sliderPagers.eq(sliderTarget+5).hide();
+        }
+
+        // Show all pagination elements if necessary
+        if (sliderTarget == lastElem) {
+            activeSlider.find('.slider-pagination').children('a').show();
+            activeSlider.find('.slider-pagination a').slice(0, -5).hide();
+        }
+
+        // Update slider response
+        sliderResponse(sliderTarget);
+    });
+
+
+});
+
+  // Get references to the select element, button, and div
+    // Get references to the select element, button, and div
+    var imageSelector = document.getElementById("imageSelector");
+        var changeImageButton = document.getElementById("changeImageButton");
+        var imageChangeDiv = document.getElementById("imageChangeDiv");
+        var image12 = document.getElementById("image12");
+
+        // Add an event listener to the button
+        changeImageButton.addEventListener("click", function() {
+            // Check the selected value from the dropdown
+            var selectedValue = imageSelector.value;
+            if (selectedValue === "2000") {
+                // If "2000" is selected, change the background image
+                imageChangeDiv.style.backgroundImage = "url('https://stagging.onetechnologyservices.com/wp-content/uploads/2023/09/Size-08-300x300.jpg')";
+            } else if (selectedValue === "1000") {
+                // If "1000" is selected, change the background image
+                imageChangeDiv.style.backgroundImage = "url('https://stagging.onetechnologyservices.com/wp-content/uploads/2023/09/Size-08-300x300.jpg')";
+                image12.style.backgroundImage = "url('https://stagging.onetechnologyservices.com/wp-content/uploads/2023/09/Size-08-300x300.jpg')";
+            } else if (selectedValue === "selectall") {
+                // If "Select All" is selected, reset the background image to default
+                imageChangeDiv2.style.backgroundImage = "url('default-image.jpg')";
+                image12.style.backgroundImage = "url('default-image.jpg')";
+            }
+        });
+
+        // Add an event listener to the select element to remove backgrounds when options are selected
+        imageSelector.addEventListener("change", function() {
+            var selectedValue = imageSelector.value;
+            if (selectedValue === "2000" || selectedValue === "1000" || selectedValue === "selectall") {
+                // Reset the background image to default when an option is selected
+                imageChangeDiv.style.backgroundImage = "url('default-image.jpg')";
+                image12.style.backgroundImage = "url('default-image.jpg')";
+            }
+        });
+	</script>
+</body>
+
+</html>
